@@ -7,10 +7,9 @@ public class App {
         vendedor.setSalario(1200);
         vendedor.setVendas(800);
         vendedor.setComissão(0.15);
-        vendedor.setSalario_final(0);
-        double salario_final =  vendedor.getComissão() + vendedor.getSalario();
+        double comissão = (vendedor.getVendas() * vendedor.getComissão()) + vendedor.getSalario();
         vendedor.calcularComissão(vendedor.getComissão(), vendedor.getVendas());
-        System.out.println("Olá "+ vendedor.getNome()+ "! Seu salário fixo é "+ vendedor.getSalario()+ " e o seu salário do mês é: "+ vendedor.getSalario_final());
+        System.out.println("Olá "+ vendedor.getNome()+ "! Seu salário fixo é "+ vendedor.getSalario()+ " e o seu salário do mês é: "+ vendedor.calcularComissão(comissão, comissão));
     }
 }
 
